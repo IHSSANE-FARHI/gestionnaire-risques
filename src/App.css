@@ -1,0 +1,215 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", "Segoe UI", Tahoma, sans-serif;
+  background: #ecf0f1;
+  color: #2c3e50;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px; /* Augmentation du padding */
+  border-radius: 8px;
+  background: #fff; /* Ajout d'un fond blanc pour contraster avec le body */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre pour un effet de profondeur */
+}
+
+/* Titre principal */
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #3498db; /* Bleu primaire */
+  text-align: center;
+  position: relative;
+}
+h1::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #3498db; /* Bleu primaire */
+  display: block;
+  margin: 10px auto 0 auto;
+  border-radius: 2px;
+}
+
+/* Titres de sections */
+h2 {
+  font-size: 1.8em;
+  margin-top: 40px; /* Augmentation du margin-top */
+  margin-bottom: 20px;
+  color: #3498db; /* Bleu primaire */
+}
+h3 {
+  font-size: 1.4em;
+  margin-bottom: 20px; /* Augmentation du margin-bottom */
+  color: #2c3e50;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Paragraphe & texte */
+p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+/* Boutons et Inputs */
+button {
+  background: #3498db; /* Bleu primaire */
+  color: #fff;
+  border: none;
+  padding: 10px 20px; /* Augmentation du padding */
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 0.95em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 10px; /* Espacement au-dessus des boutons */
+}
+button:hover {
+  background: #2980b9; /* Bleu plus foncé */
+}
+
+input, select {
+  padding: 10px; /* Augmentation du padding */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 15px; /* Augmentation du margin-bottom */
+  font-size: 1em; /* Augmentation de la taille de la police */
+}
+input[type="number"] {
+  width: 100%; /* Ajustement de la largeur pour qu'elle prenne tout l'espace disponible */
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #3498db; /* Bleu primaire */
+}
+
+/* Groupes de formulaires */
+.form-group {
+  margin-bottom: 20px; /* Augmentation du margin-bottom */
+}
+
+/* Sections (cartes) */
+.admin-section, .position-section, .contreparties-section, .details-section {
+  margin-bottom: 40px; /* Augmentation du margin-bottom */
+  padding: 25px; /* Augmentation du padding */
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #ddd;
+}
+
+.admin-section h2, .position-section h2, .contreparties-section h2, .details-section h3 {
+  margin-top: 0;
+}
+
+/* Formulaire admin */
+.admin-section form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Augmentation de l'espacement entre les éléments */
+  align-items: flex-start; /* Alignement en haut pour une meilleure disposition */
+}
+.admin-section form .form-group {
+  flex: 1 1 45%; /* Ajustement de la largeur des groupes de formulaires */
+}
+
+/* Tableaux */
+.contreparties-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.contreparties-section table th, .contreparties-section table td {
+  padding: 15px 20px; /* Augmenter le padding horizontal */
+  font-size: 1em; /* Augmentation de la taille de la police */
+  text-align: center; /* Centrage des cellules */
+  border-bottom: 1px solid #eee;
+}
+.contreparties-section table th {
+  background: #3498db; /* Bleu primaire */
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.95em;
+  letter-spacing: 0.5px;
+}
+.contreparties-section table tbody tr:hover {
+  background: #f6f8f9;
+  cursor: pointer;
+}
+.contreparties-section table td button {
+  margin: auto;
+  display: block;
+  padding: 8px 12px; /* Ajuster la taille du bouton */
+}
+.contreparties-section table tr:last-child td {
+  border-bottom: none;
+}
+.contreparties-section table td:first-child {
+  max-width: 200px; /* Limiter la largeur pour les longues adresses */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Details section */
+.details-section p {
+  margin: 10px 0; /* Augmentation du margin */
+}
+.details-section p span {
+  font-weight: 600;
+  color: #3498db; /* Bleu primaire */
+}
+
+/* Bouton "Actualiser" style supplémentaire */
+.contreparties-section button[type="button"] {
+  margin-bottom: 20px;
+  background: #f1c40f; /* Couleur d’accent */
+  color: #fff;
+}
+.contreparties-section button[type="button"]:hover {
+  background: #d4a70d;
+}
+
+/* Effet sur le container principal */
+.container {
+  animation: fadeIn 0.5s ease;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Ajustement des boutons dans les formulaires */
+form button {
+  margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .admin-section form .form-group {
+    flex: 1 1 100%; /* Full width on smaller screens */
+  }
+  .contreparties-section table {
+    font-size: 0.85em; /* Réduction de la taille de la police */
+  }
+  .contreparties-section table th, .contreparties-section table td {
+    padding: 10px; /* Réduction du padding */
+  }
+}
+
